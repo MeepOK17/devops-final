@@ -1,0 +1,11 @@
+.git
+.github
+.venv
+dist
+deploy
+monitoring
+screenshots
+tests
+**/__pycache__
+Dockerfile
+REPORT.md

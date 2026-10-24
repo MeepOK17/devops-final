@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Poetry и виртуальное окружение
+.venv/
+.cache/
+
+# Тесты и линтеры
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Сборка: колёса, зависимости, архив для установки
+dist/
+build/
+*.egg-info/
+server.tar.gz
+
+# Локальные переменные окружения
+.env
