@@ -1,0 +1,17 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: [localhost:9090]
+
+  # метрики сервиса через nginx, напрямую сервис не доступен
+  - job_name: audit-svc
+    static_configs:
+      - targets: [audit-nginx:8080]
+
+  - job_name: nginx
+    static_configs:
+      - targets: [audit-nginx-exporter:9113]
