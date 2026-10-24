@@ -1,0 +1,12 @@
+---
+audit_image: ghcr.io/meepok17/audit-svc
+audit_tag: "{{ image_tag | default('latest') }}"
+audit_dir: /data/audit-svc
+audit_network: audit
+
+pg_local_port: 15432
+nginx_port: 8088
+exporter_port: 9113
+
+pg_superuser_password: "{{ vault_pg_superuser_password }}"
+audit_db_password: "{{ vault_audit_db_password }}"
